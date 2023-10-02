@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img//favicon.png" type="image/x-icon">
+    <title>Magic Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Productos -->
+        <input type="text" id="inputBuscar" value="" placeholder="Buscar producto" autocomplete="off">
+        <div id="productos">
+        </div>
+    </main>
+
+    <!-- Carrito -->
+    <section class="ocultar">
+        <h1>
+            <span id="cantidadProductos">0</span>
+        </h1>
+
+        <div id="carrito">
+            <!-- Aca se cargarn los productos que estén en el carrito -->
+        </div>
+        <div class="total">
+            <h3>Total: $<span id="totalCarrito">0</span></h3>
+            <a href="#" class="btnComprarCarrito">Finalizar compra</a>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

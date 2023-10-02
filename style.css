@@ -1,0 +1,285 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to top, rgb(89, 124, 227), rgb(83, 23, 179));
+}
+
+main {
+  width: 60%;
+  margin: auto;
+  padding: 20px 0 0 0;
+}
+
+main input {
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+section {
+  position: fixed;
+  box-shadow: -6px -2px 25px -13px rgba(0, 0, 0, 0.15);
+  width: 340px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 30px;
+  transition: all 0.2s;
+  background-color: rgb(255, 255, 255);
+}
+
+section h1 {
+  position: absolute;
+  top: 20px;
+  right: 360px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  background: url("img/cart.png") center center no-repeat rgb(255, 255, 255);
+}
+
+section h1 span {
+  display: block;
+  background-color: rgb(255, 84, 161);
+  border-radius: 150px;
+  padding: 5px;
+  width: 30px;
+  text-align: center;
+  font-size: 14px;
+  margin: -10px 0 0 30px;
+}
+
+section h3 {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.btnAgregar,
+.btnQuitar {
+  color: rgb(255, 255, 255);
+  background-color: rgb(30, 14, 148);
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  border: 1px solid rgb(30, 14, 148);
+}
+
+.btnAgregar:hover,
+.btnQuitar:hover {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.productoCarrito {
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  margin-bottom: 10px;
+  line-height: 24px;
+}
+
+.productoCarrito h2 {
+  margin-bottom: 8px;
+}
+
+.ocultar {
+  right: -340px;
+  transition: all 0.2s;
+}
+
+#productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.producto {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.producto .precio {
+  padding: 10px 0;
+  font-size: 20px;
+  background-color: rgb(173, 51, 234);
+  display: inline-block;
+  padding: 4px 10px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-top: 4px;
+}
+
+.producto .imagen {
+  display: flex;
+  justify-content: center;
+  min-height: 160px;
+  margin: 20px 0;
+}
+
+.producto .imagen img {
+  max-height: 150px;
+}
+
+.producto .btnAgregar {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.producto:hover {
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+}
+
+.total {
+  text-align: center;
+}
+
+.btnComprarCarrito {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 113, 189);
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  margin: 20px 5px;
+  border: 1px solid rgb(219, 20, 176);
+}
+
+
+@media (max-width: 768px) {
+  #productos {
+    background: linear-gradient(to top, rgb(89, 124, 227), rgb(83, 23, 179));
+  }
+
+  .producto {
+    background-color: white;
+  }
+}
+
+@media (max-width: 500px) {
+
+  body {
+    background: linear-gradient(to top, rgb(89, 124, 227), rgb(83, 23, 179));
+  }
+
+  main {
+    width: 90%;
+  }
+
+  main input {
+    width: 80%;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  section {
+    position: fixed;
+    top: 0;
+    right: -80px;
+    padding: 30px;
+    transition: all 0.2s;
+    background-color: rgb(255, 255, 255);
+  }
+
+  section h1 {
+    position: fixed;
+    right: 5px;
+  }
+
+  section h1 span {
+    width: 20px;
+    font-size: 10px;
+    margin: -9px 0 0 30px;
+  }
+
+  section h3 {
+    padding-top: 10px;
+    text-align: left; 
+    font-size: 25px;
+    }
+
+    .total {
+      text-align: left;
+    }
+
+  #productos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+  }
+}
+
+
+@media (max-width: 320px) and (max-height: 652px) {
+
+  body {
+    background: linear-gradient(to top, rgb(89, 124, 227), rgb(83, 23, 179));
+  }
+
+  main {
+    width: 90%;
+  }
+
+  main input {
+    width: 80%;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  #productos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+  }
+
+  .producto {
+    background-color: white;
+  }
+
+  section {
+    position: fixed;
+    width: 340px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    transition: all 0.2s;
+    background-color: rgb(255, 255, 255);
+  }
+
+  section h1 {
+    position: fixed;
+    right: 5px;
+  }
+
+  section h1 span {
+    width: 20px;
+    font-size: 10px;
+    margin: -9 0 0 30px;
+  }
+
+}
